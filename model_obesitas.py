@@ -123,16 +123,16 @@ if st.button("Prediksi"):  # Jika tombol ditekan
     prediction = model.predict(input_data) #melakukan prediksi dengan model
 
     if prediction[0] == 0:
-        st.error("Pasien terdeteksi mengidap diabetes.")
+        st.error("Pasien terdeteksi berat badan kurang.")
     elif prediction[0] ==1:
-        st.error("Pasien Berat Badan Normal")
+        st.success("Pasien Berat Badan Normal")
     elif prediction[0] ==2:
-        st.error("Pasien Berat Badan Obesitas Tipe I")
+        st.warning("Pasien Berat Badan Obesitas Tipe I")
     elif prediction[0] ==3:
-        st.error("Pasien Berat Badan Obesitas Tipe II")
+        st.warning("Pasien Berat Badan Obesitas Tipe II")
     elif prediction[0] ==4:
        st.error("Pasien Berat Badan Obesitas Tipe III")
     elif prediction[0] ==5:
         st.error("Pasien Berat Badan Lebih Tipe I")
     else : 
-        st.success("Pasien Berat Badan Lebih Tipe II")
+        st.error("Pasien Berat Badan Lebih Tipe II")
